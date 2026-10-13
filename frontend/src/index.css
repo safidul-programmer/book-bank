@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Editorial palette */
+  --ink: #1a1a2e;
+  --ink-secondary: #3d3d5c;
+  --ink-muted: #6b6b8a;
+  --cream: #faf8f5;
+  --cream-dark: #f0ece6;
+  --surface: #ffffff;
+  --surface-2: #f5f2ed;
+  --surface-3: #ebe7e0;
+  --border: #ddd8d0;
+  --border-subtle: #eee9e2;
+  --rust: #a0522d;
+  --rust-light: #c4713b;
+  --rust-bg: #fdf6f0;
+
+  /* Functional */
+  --success: #2d6a4f;
+  --success-bg: #f0f7f4;
+  --error: #9b2226;
+  --error-bg: #fdf2f2;
+  --info: #264653;
+  --info-bg: #f0f5f7;
+
+  /* Shadows — subtle, warm */
+  --shadow-xs: 0 1px 2px rgba(26, 26, 46, 0.04);
+  --shadow-sm: 0 1px 3px rgba(26, 26, 46, 0.06), 0 1px 2px rgba(26, 26, 46, 0.04);
+  --shadow-md: 0 4px 8px -1px rgba(26, 26, 46, 0.06), 0 2px 4px -2px rgba(26, 26, 46, 0.04);
+  --shadow-lg: 0 10px 20px -3px rgba(26, 26, 46, 0.07), 0 4px 6px -4px rgba(26, 26, 46, 0.03);
+  --shadow-xl: 0 20px 30px -5px rgba(26, 26, 46, 0.08), 0 8px 10px -6px rgba(26, 26, 46, 0.03);
+
+  /* Radius */
+  --r-sm: 4px;
+  --r-md: 6px;
+  --r-lg: 10px;
+  --r-xl: 14px;
+
+  /* Transitions */
+  --t-fast: 150ms ease;
+  --t: 250ms ease;
+  --t-slow: 350ms ease;
+
+  /* Spacing scale */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-secondary);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; padding: 0; }
+#root { min-height: 100vh; display: flex; flex-direction: column; }
+
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, h4, h5, h6 { margin: 0; line-height: 1.2; }
+p { margin: 0; }
+img { max-width: 100%; height: auto; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+input, select, textarea { font-family: inherit; }
+::selection { background: var(--rust-bg); color: var(--ink); }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

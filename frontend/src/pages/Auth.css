@@ -1,0 +1,236 @@
+.auth-page {
+  display: flex;
+  min-height: calc(100vh - 52px - 180px);
+  background: var(--cream);
+}
+
+.auth-brand-side {
+  display: none;
+}
+
+.auth-card-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-10) var(--sp-6);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-card-header {
+  margin-bottom: var(--sp-8);
+}
+
+.auth-card-header h1 {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  margin-bottom: var(--sp-2);
+  color: var(--ink);
+}
+
+.auth-card-header p {
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+
+.auth-error {
+  background: var(--error-bg);
+  border: 1px solid #fecaca;
+  color: var(--error);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-md);
+  font-size: 13px;
+  margin-bottom: var(--sp-5);
+}
+
+.auth-success {
+  background: var(--success-bg);
+  border: 1px solid #bbf7d0;
+  color: var(--success);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-md);
+  font-size: 13px;
+  margin-bottom: var(--sp-5);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 9px 14px;
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  outline: none;
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--ink-muted);
+  box-shadow: 0 0 0 3px rgba(26, 26, 46, 0.04);
+}
+
+.field-error {
+  font-size: 11px;
+  color: var(--error);
+  font-weight: 500;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 10px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--surface);
+  background: var(--ink);
+  border: none;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transition: background var(--t-fast);
+  margin-top: var(--sp-1);
+}
+
+.auth-btn:hover:not(:disabled) {
+  background: var(--rust);
+}
+
+.auth-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-footer-text {
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink-muted);
+  margin-top: var(--sp-5);
+}
+
+.auth-footer-text a {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.auth-footer-text a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .auth-brand-side {
+    display: flex;
+    flex: 1;
+    background: var(--ink);
+    padding: var(--sp-16) var(--sp-12);
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .auth-brand-side::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: -20%;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: rgba(160, 82, 45, 0.06);
+    pointer-events: none;
+  }
+
+  .auth-brand-content {
+    position: relative;
+    z-index: 1;
+    max-width: 420px;
+  }
+
+  .auth-brand-content h2 {
+    font-family: var(--font-serif);
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--cream);
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+    margin-bottom: var(--sp-4);
+  }
+
+  .auth-brand-content p {
+    font-size: 16px;
+    color: #9a9ab0;
+    line-height: 1.7;
+  }
+
+  .auth-brand-quote {
+    margin-top: var(--sp-8);
+    padding-left: var(--sp-5);
+    border-left: 2px solid var(--rust);
+  }
+
+  .auth-brand-quote p {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    font-style: italic;
+    color: #c5c5d8;
+    line-height: 1.6;
+  }
+
+  .auth-brand-books {
+    display: flex;
+    gap: var(--sp-4);
+    margin-top: var(--sp-10);
+    transform: rotate(-2deg);
+  }
+
+  .auth-brand-books .editorial-cover {
+    box-shadow:
+      -3px 0 0 rgba(0,0,0,0.2),
+      0 8px 20px rgba(0,0,0,0.3);
+  }
+
+  .auth-card-side {
+    flex: 1;
+    padding: var(--sp-10);
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-card-side {
+    padding: var(--sp-8) var(--sp-5);
+  }
+
+  .auth-card-header h1 {
+    font-size: 24px;
+  }
+}
